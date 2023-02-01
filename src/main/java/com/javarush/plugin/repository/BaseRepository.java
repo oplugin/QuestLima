@@ -8,12 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-public abstract class BaseRepository<T extends AbstractEntity> implements Repository<T>{
+public abstract class BaseRepository<T extends AbstractEntity> implements Repository<T> {
 
     protected final Map<Long, T> map = new HashMap<>();
-
     public final AtomicLong id = new AtomicLong(0L);
-
 
     @Override
     public Collection<T> getAll() {

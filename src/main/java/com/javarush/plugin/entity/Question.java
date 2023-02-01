@@ -9,7 +9,7 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Question implements AbstractEntity{
+public class Question implements AbstractEntity {
 
     private Long id;
     private Long questId;
@@ -17,5 +17,7 @@ public class Question implements AbstractEntity{
     private final Collection<Answer> answers = new ArrayList<>();
     private final Collection<GameState> gameStates = new ArrayList<>();
 
-    public String getImage() {return "quest : " + id;}
+    public String getImage() {
+        return "quest : " + id;
+    }
 }

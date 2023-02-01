@@ -20,7 +20,7 @@ public class Quest implements AbstractEntity {
 
     private String text;
 
-    private Long authorId;
+//    private Long authorId;
 
     private Long startQuestionId;
 
