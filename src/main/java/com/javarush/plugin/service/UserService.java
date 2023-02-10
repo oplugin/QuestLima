@@ -1,18 +1,18 @@
 package com.javarush.plugin.service;
 
 import com.javarush.plugin.entity.User;
+import com.javarush.plugin.repository.Repository;
 import com.javarush.plugin.repository.UserRepository;
 
 import java.util.Collection;
 import java.util.Optional;
 
-public class UserService {
+public enum UserService {
 
-    private final UserRepository userRepository;
+    USER_SERVICE;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final Repository<User> userRepository = new UserRepository();;
+
 
     public void create(User user) {
         userRepository.create(user);

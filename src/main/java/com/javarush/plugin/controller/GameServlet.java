@@ -12,8 +12,7 @@ public class GameServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         // создаем новую сессию
-        HttpSession currentSession = request.getSession(true);
-        System.out.println(currentSession);
+
 
         getServletContext().getRequestDispatcher("/game.jsp").forward(request, response);
     }
